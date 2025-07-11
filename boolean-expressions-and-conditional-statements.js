@@ -42,7 +42,7 @@ if (choice === "mountains" && hasTorch) {
   console.log("You get lost and wander aimlessly.");
 }
 
-/* 
+/*
 
 Add Customization and expand the game:
   - Add more choices and scenarios.
@@ -50,3 +50,18 @@ Add Customization and expand the game:
   - Use nested conditionals and logical operators to create complex outcomes.
 
 */
+const hasSword = true;
+
+console.log("You approach a troll who wants your magic bean, otherwise he says he will fight you");
+const choiceTwo = readline.question("Do you give him the magic bean you have? Y or N - ");
+
+if (choiceTwo.toLowerCase() == "n" && hasSword) {
+  let scared = readline.question("You have a sword. Are you scared to fight him? Y or N - ");
+  if (scared.toLowerCase() == "n") {
+    console.log("You fight him!");
+  } else {
+      console.log("You run, like a coward!");
+    }
+  } else {
+  console.log("You give him the bean and go past.");
+}
